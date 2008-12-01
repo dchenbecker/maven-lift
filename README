@@ -1,1 +1,15 @@
-This is where things will stay until we find a permanent home.
+This is where things will stay until we find a permanent home. Until it's hosted on scala-tools.org you'll need to download the sources from here and do a "mvn install" to install the plugin.
+
+Instructions:
+
+To use this plugin, add 
+
+      <plugin>
+        <groupId>net.liftweb.tools</groupId>
+        <artifactId>maven-lift</artifactId>
+      </plugin>
+
+To your POM's plugins section. Once you've done that the plugin should automatically run during the compile phase, and will produce a file called <target>/i18n-template.properties that contains all of the found I18N keys. If you want to run the plugin manually, just run "mvn lift:i18ngen".
+
+Derek
+
