@@ -24,7 +24,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Goal which runs the I18N LocKeyScanner.
+ * Goal which runs the I18N LocKeyScanner. This will scan the given source directory
+ * for files with a scala, xml, xhtml, htm, or html suffix and parse them for Lift's
+ * localized string mechanisms:
+ * 
+ * <ul>
+    <li><a href="http://scala-tools.org/mvnsites/liftweb/lift-webkit/scaladocs/net/liftweb/http/S$object.html">S.? methods</a></li>
+    <li>The &lt;lift:loc/&gt; tag - see <a href="http://liftweb.net/index.php/LiftTags#loc">http://liftweb.net/index.php/LiftTags#loc</a></li>
+   </ul>
+
+   The plugin then generates a file called i18n-template.properties in the output directory
+   with all of the keys in a property ("key=") format.
  *
  * @goal i18ngen
  * 
@@ -41,7 +51,7 @@ public class I18NMojo
     private File sourceDirectory;
 
     /**
-     * Location for output of properties.
+     * The directory where we output the properties file.
      * @parameter expression="${project.build.directory}"
      * @required
      */

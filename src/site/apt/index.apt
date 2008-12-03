@@ -1,0 +1,20 @@
+ ------
+ Introduction
+ ------
+ Derek Chen-Becker <java [at] chen-becker.org>
+ ------
+ 2008-12-03
+ ------
+
+
+Maven-lift-plugin
+  
+    This plugin provides utility functionality specific to Lift projects. Currently, the only functionality
+    provided is for generating an I18N properties file based on a scan of the project's sources. Other 
+    functionality may follow.
+
+* Goals Overview
+
+  General information about the goals.
+
+  * {{{i18ngen-mojo.html}lift:i18ngen}} Generates I18N template properties
