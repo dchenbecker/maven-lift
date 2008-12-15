@@ -5,7 +5,7 @@
   <artifactId>maven-lift-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>maven-lift Maven Mojo</name>
+  <name>maven-lift-plugin</name>
   <inceptionYear>2008</inceptionYear>
   <description>
     This plugin provides utility functionality specific to Lift projects. Currently, the only functionality
@@ -190,4 +190,19 @@
     </plugins>
   </reporting>
 
+  <distributionManagement>
+    <repository>
+      <id>scala-tools.org</id>
+      <url>http://scala-tools.org/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>scala-tools.org</id>
+      <url>http://scala-tools.org/nexus/content/repositories/snapshots</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+    <site>
+      <id>hscala-tools.org</id>
+      <url>http://scala-tools.org/nexus/content/repositories/mvnsites/${project.artifactId}</url>
+    </site>
+  </distributionManagement>
 </project>
