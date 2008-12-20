@@ -201,7 +201,7 @@
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
     <site>
-      <id>hscala-tools.org</id>
+      <id>scala-tools.org</id>
       <url>http://scala-tools.org/nexus/content/repositories/mvnsites/${project.artifactId}</url>
     </site>
   </distributionManagement>
